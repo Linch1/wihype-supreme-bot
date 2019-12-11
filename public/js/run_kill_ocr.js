@@ -1,7 +1,8 @@
 const fs = require('fs'),
 	  spawn = require('child_process').spawn,
 	  ps = require('ps-node'),
-	  plat = process.platform;
+	  plat = process.platform,
+	  {PythonShell} = require("python-shell");
 
 
 var ocr_settings,
@@ -38,33 +39,26 @@ function kill_ocr(){
 function run_ocr(){
 	kill_ocr();
 	if (ocr_settings['pid'] == -1){
-		let program = plat == 'win32' ? 'wihype_ocr.exe' : (plat == 'darwin' ? '' : (plat == 'linux' ? 'linux' : ''))
-		if (program != ''){
-			if (plat == 'linux' || plat == 'win32'){
-				ocr_process = spawn('python3', ['wihype_ocr.py']);
-			} else if( plat == 'win32') {
-				ocr_process = spawn('py', ['wihype_ocr.py']);
-			} else {
-				ocr_process = spawn(program);
-			}
-			
-			ocr_settings['pid'] = ocr_process.pid;
-			edit_ocr_settings()
+		python_process = new PythonShell('wihype_ocr.py');
+		ocr_process = python_process.childProcess;
 
-			ocr_process.stdout.on('data', (data) => {
-			  console.log(data.toString());
-			});
+		ocr_settings['pid'] = ocr_process.pid;
+		edit_ocr_settings()
 
-			ocr_process.stderr.on('data', (data) => {
-			  console.error(data.toString());
-			});
+		ocr_process.stdout.on('data', (data) => {
+		  console.log(data.toString());
+		});
 
-			ocr_process.on('exit', (code) => {
-			  console.log(`Child exited with code ${code}`);
-			});
+		ocr_process.stderr.on('data', (data) => {
+		  console.error(data.toString());
+		});
 
-			return ocr_process.pid;
-		}
+		ocr_process.on('exit', (code) => {
+		  console.log(`Child exited with code ${code}`);
+		});
+
+		return ocr_process.pid;
+		
 	}
 }
 
