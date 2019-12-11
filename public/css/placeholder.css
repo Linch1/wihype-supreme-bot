@@ -1,0 +1,91 @@
+h1 {
+	color: rgb(90, 186, 255); 
+	
+	font-weight: bolder; 
+	font-style: normal;
+	margin-left: 1rem;
+	font-size: 5rem;
+}
+
+.placeholder{
+	width: 100%;
+	height: 100%;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	transition: all 1s;
+}
+
+.placeholder .center{
+	width: 30rem;
+	font-family: 'Poppins', sans-serif;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	color: #6F8AB7;
+}
+
+.placeholder .center div.button, .welcome div.button{
+	width: 100%;
+	height: 5rem;
+	box-sizing: border-box;
+	grid-row: 2;
+	border: 5px solid rgb(90, 186, 255);
+	
+	display: grid;
+	grid-template-columns: 5fr 3fr;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	transition: all 1s;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.placeholder .center div.button .title{
+	width: 100%;
+	text-align: center;
+}
+
+.placeholder .center div.button span, .welcome div.button span{
+	text-align: right;
+}
+
+.placeholder .center div.button i , .welcome div.button i{
+	text-align: right;
+	margin-right: 2rem;
+}
+
+.placeholder .center div.button .background, .welcome div.button .background{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	background: #5ABAFF;
+	z-index: -1;
+	left: -100%;
+	transition: all 1s;
+}
+
+.placeholder .center div.button .reposition, .welcome div.button .reposition{
+	left: 0 !important;
+}
+
+.placeholder .center div.button:hover, .welcome div.button:hover{
+	border-color: white;
+	color: white;
+
+}
+
+.welcome div.button{
+	width: 45%;
+	margin-top: 4rem;
+}
+
+.welcome div.button .background {
+	background-color: #f7b42c;
+	background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
+
+}

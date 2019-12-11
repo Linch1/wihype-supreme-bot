@@ -1,0 +1,97 @@
+<%include ../partials/header.ejs%>
+	<link rel="stylesheet" type="text/css" href="../../public/css/body-container.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/proxy.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/banners.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/buttons.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/tooltip.css">
+	<script type="text/javascript" src='../../public/js/run_kill_ocr.js'></script>
+	<script type="text/javascript" src='../../public/js/proxy.js'></script>
+	<script type="text/javascript" src='../../public/js/open_links.js'></script>
+	<title>wihype</title>
+</head>
+<body>
+
+	<%include ../partials/placeholder.ejs%>
+	<div class="body body-inview proxy-container body-container">
+		<%include ../partials/navbar.ejs%>
+		<%include ../partials/menu.ejs%>
+		<div class="title">
+			<strong>Proxies</strong>
+		</div>
+
+		<!--
+		<div id="adv-banner-top" class="banner" data-link="https://www.google.com">
+	
+			<img src="https://wpadvancedads.com/wp-content/uploads/2015/08/728x90.png">
+
+		</div>
+
+		<div id="adv-banner-bottom" class="banner">
+			
+		</div>
+
+		<div id="adv-banner-right" class="banner">
+			
+		</div>
+		-->
+
+
+
+		<div class="proxy-body-container">
+			<div class="proxy-list-title">
+				<div> IP </div>
+				<div> PORT </div>
+				<div> USERNAME </div>
+				<div> PASSWORD </div>
+				<div> STATUS </div>
+				<div> ACTIONS </div>
+			</div>
+			<div class="proxys-list-container">
+				
+			</div>
+			<div class="buttons">
+		
+				<div id="add-proxy" class="button submit">
+					<span>ADD <i class="fas fa-plus"></i></span>
+					<div class="background"></div>
+				</div>
+
+
+
+				<div id="delete-all-proxys" class="button delete">
+					<span>DEL ALL <i class="fas fa-trash"></i></span>
+					<div class="background"></div>
+				</div>
+
+				<div id="delete-not-working-proxys" class="button edit">
+					<span>DEL NOT WORKING <i class="fas fa-trash"></i></span>
+					<div class="background"></div>
+				</div>
+
+				<div id="test-all-proxys" class="button run-all">
+					<span>TEST ALL <i class="fas fa-play"></i></span>
+					<div class="background"></div>
+				</div>
+
+			</div>
+		</div>
+		<div class="proxys-input-container">
+			<div class="proxys-input">
+
+				<div class="proxys-input-close">
+					<i class="fas fa-times"></i>
+				</div>
+
+				<textarea id="proxys" name="proxys" placeholder="proxy_ip:port:username:password (write one proxy per line)"></textarea>
+
+				<div class="submit-textarea">
+					<div id="submit-proxys" class="button submit">
+						<span>ADD PROXIES <i class="fas fa-plus"></i></span>
+						<div class="background"></div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+<%include ../partials/footer.ejs%>

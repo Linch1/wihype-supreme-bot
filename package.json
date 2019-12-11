@@ -1,0 +1,41 @@
+{
+  "name": "wihype",
+  "version": "1.0.0",
+  "description": "The best supreme bot",
+  "main": "index.js",
+  "productName": "wihype",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "pkg": {
+    "scripts": "public/js/*.js",
+    "assets": [
+      "public/css/*.css",
+      "public/img/*.png",
+      "public/img/logo.jpg",
+      "views/**/*"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.7.2",
+    "ejs-electron": "^2.0.3",
+    "jquery": "^3.4.1",
+    "mkdirp": "^0.5.1",
+    "node-fetch": "^2.6.0",
+    "open": "^7.0.0",
+    "ps-node": "^0.1.6",
+    "request": "^2.88.0",
+    "screen-size": "^1.0.0",
+    "socks5-http-client": "^1.0.4",
+    "socks5-https-client": "^1.2.1",
+    "tesseract.js": "^2.0.0-beta.2",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "electron": "^6.1.5"
+  },
+  "bin": "index.js"
+}

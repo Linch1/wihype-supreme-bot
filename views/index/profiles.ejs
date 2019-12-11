@@ -1,0 +1,186 @@
+<%include ../partials/header.ejs%>
+	<link rel="stylesheet" type="text/css" href="../../public/css/body-container.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/profiles.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/inputs.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/banners.css">
+	<script type="text/javascript" src='../../public/js/run_kill_ocr.js'></script>
+	<script type="text/javascript" src='../../public/js/populate_profiles.js'></script>
+	<script type="text/javascript" src='../../public/js/open_links.js'></script>
+	<script type="text/javascript" src='../../public/js/profiles.js'></script>
+	<title>wihype - checkout</title>
+	<script type="text/javascript"></script>
+</head>
+<body>
+
+	<div class="body body-inview body-container checkout-container">
+		<%include ../partials/navbar.ejs%>
+		<%include ../partials/menu.ejs%>
+		<div class="title">
+			<strong>Profiles</strong>
+		</div>
+
+		<!--
+		<div id="adv-banner-top" class="banner" data-link="https://www.google.com">
+	
+			<img src="https://wpadvancedads.com/wp-content/uploads/2015/08/728x90.png">
+
+		</div>
+
+		<div id="adv-banner-bottom" class="banner">
+			
+		</div>
+
+		<div id="adv-banner-right" class="banner">
+			
+		</div>
+		-->
+
+
+		<div class="settings-container">
+			<div class="shipping settings form">
+				<header>SHIPPING</header>
+				<div id="nome-profilo-container">
+					<input type="text" name="nome-profilo" id="nome-profilo" autocomplete="off" required>
+					<label for="nome-profilo"><span>PROFILE-NAME <i class="fas fa-check"></i></span></label>
+				</div>
+				<div>
+					<input type="text" name="nome" id="nome" autocomplete="off" required>
+					<label for="nome"><span>NAME <i class="fas fa-check"></i></span></label>
+				</div>
+				<div>
+					<input type="text" name="cognome" id="cognome" autocomplete="off" required>
+					<label for="cognome"><span>SURNAME <i class="fas fa-check"></i></span></label>
+					
+				</div>
+				<div>
+					<input type="email" name="email" id="email" autocomplete="off" required>
+					<label for="email"><span>MAIL <i class="fas fa-check"></i></span></label>
+					
+				</div>
+				<div>
+					<input type="tel" name="telefono" id="telefono" autocomplete="off" required>
+					<label for="telefono"><span>NUMBER <i class="fas fa-check"></i></span></label>
+					
+				</div>
+				<div>
+					<input type="text" name="indirizzo-1" id="indirizzo-1" autocomplete="off" required>
+					<label for="indirizzo-1"><span>ADDRESS 1 <i class="fas fa-check"></i></span></label>
+					
+				</div>
+				<div>
+					<input type="text" name="indirizzo-2" id="indirizzo-2" autocomplete="off" required>
+					<label for="indirizzo-2"><span>ADDRESS 2 <i class="fas fa-check"></i></span></label>
+					
+				</div>
+				<div>
+					<input type="text" name="indirizzo-2" id="indirizzo-3" autocomplete="off" required>
+					<label for="indirizzo-3"><span>ADDRESS 3 <i class="fas fa-check"></i></span></label>
+					
+				</div>
+				<div>
+					<input type="text" name="città" id="città" autocomplete="off" required>
+					<label for="città"><span>CITY <i class="fas fa-check"></i></span></label>
+					
+				</div>
+				<div>
+					<input type="text" name="codice-postale" id="codice-postale" autocomplete="off" required>
+					<label for="codice-postale"><span>POST CODE <i class="fas fa-check"></i></span></label>
+					
+				</div>
+				<div>
+					<label></label>
+					<select name="nazione" id="nazione" autocomplete="off" required style="z-index: 1;">
+						<option value="GB">UK</option>
+						<option value="NB">UK (N. IRELAND)</option>
+						<option value="">-</option>
+						<option value="AT">AUSTRIA</option>
+						<option value="BY">BELARUS</option>
+						<option value="BE">BELGIUM</option>
+						<option value="BG">BULGARIA</option>
+						<option value="HR">CROATIA</option>
+						<option value="CZ">CZECH REPUBLIC</option>
+						<option value="DK">DENMARK</option>
+						<option value="EE">ESTONIA</option>
+						<option value="FI">FINLAND</option>
+						<option value="FR">FRANCE</option>
+						<option value="DE">GERMANY</option>
+						<option value="GR">GREECE</option>
+						<option value="HU">HUNGARY</option>
+						<option value="IS">ICELAND</option>
+						<option value="IE">IRELAND</option>
+						<option value="IT">ITALY</option>
+						<option value="LV">LATVIA</option>
+						<option value="LT">LITHUANIA</option>
+						<option value="LU">LUXEMBOURG</option>
+						<option value="MC">MONACO</option>
+						<option value="NL">NETHERLANDS</option>
+						<option value="NO">NORWAY</option>
+						<option value="PL">POLAND</option>
+						<option value="PT">PORTUGAL</option>
+						<option value="RO">ROMANIA</option>
+						<option value="RU">RUSSIA</option>
+						<option value="SK">SLOVAKIA</option>
+						<option value="SI">SLOVENIA</option>
+						<option value="ES">SPAIN</option>
+						<option value="SE">SWEDEN</option>
+						<option value="CH">SWITZERLAND</option>
+						<option value="TR">TURKEY</option>
+					</select>
+					<label for="nazione">COUNTRY</label >
+
+				</div>
+
+				<div class="buttons">
+					<div class="button submit">
+						<span>NEW <i class="fas fa-plus"></i></span>
+						<div class="background"></div>
+					</div>
+
+					<div class="button delete">
+						<span>DEL <i class="fas fa-times"></i></span>
+						<div class="background"></div>
+					</div>
+
+					<div class="select">
+						<select id="profiles">
+							<option>Profiles</option>
+						</select>
+					</div>
+				</div>
+				
+			</div>
+			<div class="payment settings">
+				<header>CARD</header>
+				<div class="card-front">
+					<div class="logo">wihype</div>
+					<input type="text" name="card[number]" id="number" placeholder="4444 4444 4444 4444" maxlength="16">
+					<input type="text" name="card[scad-month]" id="month" placeholder="44" class="scad month" maxlength="2">
+					<input type="text" name="card[scad-year]" id="year" placeholder="44" class="scad year" maxlength="2">
+					<div id="scad-title">Valid thru</div>
+					<div id="scad-separator">/</div>
+
+					<input type="text" name="card[owner]" id="owner" placeholder="CARD OWNER">
+				</div>
+
+				<div class="card-retro">
+					<div class="logo">wihype</div>
+					<input type="text" name="card[cvv]" id="cvv" placeholder="444" maxlength="3">
+					<label for="cvv"> CVV </label>
+					<div id="sign">Authorized Sign <i class="fas fa-check"></i></div>
+					<div id="comment">Electronic use only <i class="fas fa-project-diagram"></i> </div>
+				</div>
+				<div class="card-settings" >
+					<label for="brand">CARD BRAND</label>
+					<select name="brand" id="brand" autocomplete="off" required style="z-index: 1;">
+						<option value="visa">Visa</option>
+						<option value="american_express">American Express</option>
+						<option value="master">Mastercard</option>
+						<option value="solo">Solo</option>
+						<option value="paypal">PayPal</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+	</div>
+<%include ../partials/footer.ejs%>

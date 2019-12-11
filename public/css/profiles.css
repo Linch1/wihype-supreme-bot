@@ -1,0 +1,291 @@
+
+.checkout-container{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.settings-container{
+	color: white;
+	width: 1000px;
+	height: 700px;
+	position: relative;
+	left: 13%;
+	top: 5%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+
+}
+
+.shipping{
+	position: relative;
+	width: 95%;
+	margin: auto;
+	margin-top: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: 80px;
+	justify-content: center;
+	align-items: center;
+	left: -50%;
+	opacity: 0;
+	transition: all 1s;
+	overflow: visible;
+}
+
+#nome-profilo-container{
+	position: relative;
+	top: -30%;
+}
+
+.shipping .buttons{
+	grid-column: span 2;
+	grid-row: span 2;
+	width: 100%;
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: center;
+	align-items: center;
+	grid-column-gap: 2rem;
+	left: -10%;
+}
+
+.buttons .button,.buttons .select{
+	width: 95%;
+	height: 30%;
+	margin-top: 4rem;
+	position: relative;
+}
+
+.buttons .select{
+
+	margin-bottom: 2.5rem;
+	margin-left: 2.5rem;
+}
+
+#profiles{
+	width: 80%;
+	font-size: 1.2rem;
+}
+
+
+.buttons .button {
+	border-bottom: 3px solid white;
+	border-top: 3px solid white;
+	cursor: pointer;
+	transition: all 1s;
+}
+
+.buttons .button:hover.submit{
+	border-color: black;
+}
+
+.buttons .button span{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	transition: all 1s;
+}
+
+.buttons .button:hover.delete span{ 
+	color: red;
+}
+
+.buttons .button:hover.submit span{ 
+	color: #5ea36a;
+}
+
+
+.buttons .button .background{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: -100%;
+	transition: all 1s;
+	background-color: white;
+}
+
+
+.buttons .button:hover div.background{
+	left: 0 !important;
+}
+
+.shipping-position-fixed{
+	left: 0;
+	opacity: 1;
+}
+
+.payment{
+	
+	width: 95%;
+	height: 85%;
+	margin: 0 auto;
+	margin-top: 0;
+	grid-row: span 2;
+	display: grid;
+	grid-template-rows: 1fr 10fr 10fr 3fr;
+	grid-template-columns: 1fr;
+
+}
+
+.card-front, .card-retro{
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	border-radius: 10px;
+	position: relative;
+	opacity: 0;
+	right: -50%;
+	transition: all 1s;
+}
+
+.card-front{
+	background-image:url('../img/carta_fronte.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	box-shadow: 0px 0px 0px 1px rgba(255,255,255,0.5);
+}
+.card-front .logo{
+	color: rgb(90, 186, 255);
+	font-size: 2.5rem;
+	position: absolute;
+	right: 5%;
+	top: 2%;
+}
+
+.card-front #number{
+	font-size: 1.4rem;
+	background: none;
+	color: white;
+	position: absolute;
+	bottom: 30%;
+	left: 8%;
+}
+
+.card-front #owner{
+	font-size: 1.5rem;
+	background: none;
+	color: white;
+	position: absolute;
+	bottom: 10%;
+	left: 8%;
+}
+
+.card-front .scad{
+	position: absolute;
+	color: white;
+	background: none;
+	font-size: 1rem;
+	width: 5%;
+}
+
+.card-front .month{
+	bottom: 32%;
+	right: 21%;
+}
+
+.card-front .year{
+	bottom: 32%;
+	right: 13%;
+}
+
+.card-front #scad-title{
+	position: absolute;
+	font-size: 0.8rem;
+	bottom: 40%;
+	right: 18%;
+}
+
+.card-front #scad-separator{
+	position: absolute;
+	font-size: 1rem;
+	bottom: 31%;
+	right: 19%;
+}
+
+.card-retro{
+	background-image:url('../img/carta_retro.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	box-shadow: 0px 0px 0px 1px rgba(255,255,255,0.5);
+}
+
+.card-retro #cvv{
+	position: absolute;
+	background: none;
+	color: white;
+	font-size: 1rem;
+	width: 12%;
+	bottom: 47%;
+	right: 36%;
+}
+
+.card-retro label[for="cvv"]{
+	color: white;
+	font-weight: 100;
+	font-size: 0.9rem;
+	position: absolute;
+	bottom: 39%;
+	right: 40.5%;
+}
+
+.card-retro #sign{
+	position: absolute;
+	font-size: 0.8rem;
+	bottom: 30%;
+	left: 15%;
+}
+
+.card-retro #comment{
+	position: absolute;
+	top: 23%;
+	right: 15%;
+	font-size: 0.7rem;
+}
+
+.card-retro .logo{
+	color: rgb(90, 186, 255);
+	font-size: 1rem;
+	position: absolute;
+	left: 2%;
+	bottom: 2%;
+}
+
+
+.card-settings{
+	margin-left: 4rem;
+	position: relative;
+	top: 15%;
+	right: -50%;
+	opacity: 0;
+	transition: all 1s;
+}
+
+
+#brand{
+	font-size: 1.3rem;
+	background: none;
+	color: white;
+	border: 0;
+	border-bottom: 1px solid white;
+}
+
+label[for="brand"]{
+	display: block;
+	position: relative;
+	top: -15%;
+}
+
+#brand option{
+	color: black;
+}
+
+.position-fixed{
+	right: 0;
+	opacity: 1;
+}
+

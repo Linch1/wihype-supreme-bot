@@ -1,0 +1,215 @@
+.body-container .title{
+	left: 50%;
+}
+
+.proxy-container{
+	width: 100%;
+	height: 100%;
+
+}
+
+*:focus{
+	outline: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: none; 
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.proxy-body-container{
+	width: 85%;
+	height: 80%;
+	position: absolute;
+	right: 25%;
+	bottom: 8%;
+	color: white;
+	transition: right 1s, opacity 1s;
+	opacity: 0;
+	--top: 5%;
+	--width: 950px;
+	--height: 450px;
+
+}
+
+.proxy-body-container.inview{
+	right: 0;
+	opacity: 1;
+}
+
+.proxy-list-title{
+	position: relative;
+	top: var(--top);
+	width: var(--width);
+	height: 5%;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	font-weight: 800;
+	margin-bottom: 0.5rem;
+}
+
+.proxys-list-container{
+	position: relative;
+	top: var(--top);
+	width: var(--width);
+	height: var(--height);
+	border-radius: 10px;
+	overflow: auto;
+	overflow-x: hidden;
+	margin-bottom: 1.5rem;
+	background: #1e1e1e;
+}
+
+.proxys-list-container .proxy{
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	left: 0;
+	transition: all 1s;
+}
+
+.proxys-list-container .proxy:hover{
+	background: #282828; 
+}
+
+.action.run{
+	color: #5ea36a;
+}
+
+.action.remove{
+	color: red;
+}
+
+.actions .action{
+	margin-left: 1rem;
+	font-size: 0.8rem;
+	cursor: pointer;
+}
+
+.proxy div{
+	text-align: center;
+}
+
+#big-add-proxy{
+	width: 30% !important;
+	height: 10%;
+	margin: auto;
+	margin-top: 13rem;
+	border: 3px solid white;
+}
+
+.buttons{
+	position: relative;
+	top: var(--top);
+	width: var(--width);
+	height: 15%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	font-size: 0.8rem;
+}
+
+#add-proxy{
+	
+}
+
+#delete-all-proxys{
+
+}
+
+#delete-not-working-proxys {
+	
+}
+
+#test-all-proxys{
+
+}
+
+
+.proxys-input-container{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: 999;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	left: -100%;
+
+}
+
+
+.proxys-input{
+	width: 70%;
+	height: 60%;
+	background: #3F3F3F;
+	border-radius: 10px;
+	position: relative;
+	left: -25%;
+	opacity: 0;
+	transition: all 1s;
+}
+
+.proxys-input.inview{
+	left: 0;
+	opacity: 1;
+}
+
+
+.proxys-input textarea{
+	width: 92%;
+	height: 70%;
+	margin-bottom: 0.5rem;
+	resize: none;
+	border-radius: 10px;
+	background: #333333;
+	border: 0;
+	color: white;
+	font-size: 1.2rem;
+	padding: 1rem;
+	margin-left: 1rem;
+	margin-top: 1.3rem;
+}
+
+.submit-textarea{
+	width: 30%;
+	height: 20%;
+	font-size: 1rem;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.proxys-input-close{
+	
+	position: absolute;
+	top: 1%;
+	right: 1%;
+	cursor: pointer;
+	color: white;
+}

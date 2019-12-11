@@ -1,0 +1,33 @@
+<%include ../partials/header.ejs%>
+	<link rel="stylesheet" type="text/css" href="../../public/css/body-container.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/home.css">
+	<script type="text/javascript" src='../../public/js/home.js'></script>
+	<title>wihype</title>
+</head>
+<body>
+
+	<%include ../partials/placeholder.ejs%>
+	<div class="body home-container body-container">
+		<%include ../partials/navbar.ejs%>
+		<%include ../partials/menu.ejs%>
+		<div class="title">
+			<strong>wihype</strong>
+		</div>
+
+		<div class="welcome-container">
+			<div class="welcome remove-elem">
+				<span> Welcome Francesco </span>
+				<span> Enjoy your 365 days with us </span>
+				<div class="button" action="/run" method="POST"> <!--  REGOLE CSS DEL BOTTONE NEL FILE PLACEHOLDER.CSS -->
+					<span>RUN BOT</span> <i class="fas fa-arrow-right"></i>
+					<div class="background postion-fixed">	
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+<%include ../partials/footer.ejs%>
+
+

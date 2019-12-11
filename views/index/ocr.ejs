@@ -1,0 +1,89 @@
+<%include ../partials/header.ejs%>
+	<link rel="stylesheet" type="text/css" href="../../public/css/body-container.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/banners.css">
+	
+	<link rel="stylesheet" type="text/css" href="../../public/css/buttons.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/ocr.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/tooltip.css">
+	<script type="text/javascript" src='../../public/js/run_kill_ocr.js'></script>
+	<script type="text/javascript" src='../../public/js/ocr.js'></script>
+	<title>wihype</title>
+</head>
+<body>
+
+	<%include ../partials/placeholder.ejs%>
+	<div class="body body-inview body-container ocr-body-container">
+		<%include ../partials/navbar.ejs%>
+		<%include ../partials/menu.ejs%>
+		<div class="title">
+			<strong>OCR SETTINGS</strong>
+		</div>
+
+	
+		<!--
+		<div id="adv-banner-top" class="banner" data-link="https://www.google.com">
+	
+			<img src="https://wpadvancedads.com/wp-content/uploads/2015/08/728x90.png">
+
+		</div>
+
+		<div id="adv-banner-bottom" class="banner">
+			
+		</div>
+
+		<div id="adv-banner-right" class="banner">
+			
+		</div>
+		-->
+
+		<div class="ocr-menu">
+			<div id="ocr-title"> Edit the captured screen portion by changing the values. This will help the ocr during the cop to be faster </div>
+			<div class="ocr-container">
+				<div id="screen-container">
+					<img id="screen-image" src="../../datas/screen.png" alt="current screen">
+				</div>
+			</div>
+			<div id="ocr-settings"> 
+				<div class="tooltip">
+					<span class="tooltiptext top"> The leftmost point </span>
+					<label for="start-width"> START WIDTH  </label>
+					<input type="number" name="restock" id="start-width">
+				</div>
+				<div class="tooltip">
+					<span class="tooltiptext top"> The rightmost point </span>
+					<label for="end-width"> END WIDTH  </label>
+					<input type="number" name="restock" id="end-width">
+				</div>
+				<div class="tooltip">
+					<span class="tooltiptext top"> The highest point </span>
+					<label for="start-height"> START HEIGHT  </label>
+					<input type="number" name="restock" id="start-height">
+				</div>
+				<div class="tooltip">
+					<span class="tooltiptext top"> The lowest point  </span>
+					<label for="end-height"> END HEIGHT </label>
+					<input type="number" name="restock" id="end-height">
+				</div>
+				<div class="tooltip">
+					<span class="tooltiptext top"> The delay that the bot uses for reload the upper image  </span>
+					<label for="reload-time"> RELOAD DELAY </label>
+					<input type="number" name="restock" id="reload-time">
+				</div>
+				<div class="buttons">
+					<div class="button run-all" id="run">
+						<span><i class="fas fa-play"></i></span>
+						<div class="background"></div>
+					</div>
+					<div class="button delete" id="stop">
+						<span><i class="fas fa-square"></i></span>
+						<div class="background"></div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+	</div>
+<%include ../partials/footer.ejs%>
+
+

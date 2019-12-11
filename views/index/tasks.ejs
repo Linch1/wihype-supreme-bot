@@ -1,0 +1,114 @@
+<%include ../partials/header.ejs%>
+	<link rel="stylesheet" type="text/css" href="../../public/css/body-container.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/tasks.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/buttons.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/tooltip.css">
+	
+	<script type="text/javascript" src='../../public/js/populate_profiles.js'></script>
+	<script type="text/javascript" src='../../public/js/run_kill_ocr.js'></script>
+	<script type="text/javascript" src='../../public/js/tasks.js'></script>
+	<title>wihype</title>
+</head>
+<body>
+
+	<%include ../partials/placeholder.ejs%>
+	<div class="body body-inview tasks-container body-container">
+		<%include ../partials/navbar.ejs%>
+		<%include ../partials/menu.ejs%>
+		<%include ../partials/alert.ejs%>
+		<div class="title">
+			<strong>JOB</strong>
+		</div>
+		<div class="tasks-body form">
+			<div id="items-settings-container">
+				<div id="arrow-right" class="arrow left">
+					<i class="fas fa-chevron-left"></i>
+				</div>
+
+				<div id="arrow-left" class="arrow right">
+					<i class="fas fa-chevron-right"></i>
+				</div>
+				
+				<div id="items-settings-container-inner">
+					
+				</div>
+			</div>	
+			<div class="task-settings">
+
+				<div id="detection">
+					<div>
+						<label  class="inline" for="restock-checkbox"> RESTOCK TASK </label>
+						<input type="checkbox" name="restock" id="restock-checkbox">
+					</div>
+					<div id="automate">
+						<label  class="inline" for="timer-auto-detect-checkbox"> DETECT AUTOMATICALLY DROP </label>
+						<input type="checkbox" name="auto-detect" value="" id="timer-auto-detect-checkbox" checked="true">
+					</div>
+					<div id="timer">
+						<div class="D1">
+							<label  class="inline" for="timer-checkbox"> TIMER </label>
+							<input type="checkbox" name="timer" value="" id="timer-checkbox" >
+						</div>
+						<div class="D2" id="timer-div">
+							<input type="text" name="timer-date" id="timer-time" pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]" placeholder="00:00:00"  disabled >
+							
+							<input type="date" name="timer-date" id="timer-date"  disabled>
+						</div>
+					</div>
+				</div>
+
+				<div id="options">
+					<div>
+						<label  class="inline" for="ocr-checkbox"> OCR </label>
+						<input type="checkbox" name="ocr" id="ocr-checkbox">
+					</div>
+
+					<div>
+						<label  class="inline" for="proxy-checkbox"> PROXY </label>
+						<input type="checkbox" name="proxy" id="proxy-checkbox">
+					</div>
+
+					<div>
+						<label  class="inline" for="auto-checkbox"> AUTO CHECKOUT </label>
+						<input type="checkbox" name="auto-checkout" value="" id="auto-checkbox" checked> 	
+					</div>
+
+					<div>
+						<label  class="inline" for="random-checkbox"> PICK RANDOM IF SIZE NOT AVIABLE</label>
+						<input type="checkbox" name="go-random-size" value="" id="random-checkbox" checked>
+					</div>
+
+					<div class="items-num">
+						<label class="inline tooltip" for="item-quantity"> <span class="tooltiptext right">for each new item the bot will take about 300ms more</span> ITEMS NUMBER </label>
+						<input type="number" min="1" max="9" value="1" name="go-random-size" id="item-quantity" maxlength="1">
+					</div>
+
+
+				</div>
+				
+				<div id="profiles-div">
+					<label for="profiles">PROFILE</label>
+					<select id="profiles">
+					</select>
+				</div>
+
+				<div>
+					<label for="checkout-delay">CHECKOUT DELAY</label>
+					<input type="number" name="checkout-delay" id="checkout-delay" placeholder="500 (ms)">
+				</div>
+
+
+				
+			</div>
+		
+			<div class="button submit" id="task-button">
+				<span>ADD <i class="fas fa-plus"></i></span>
+				<div class="background"></div>
+			</div>
+		</div>
+	
+
+	</div>
+<%include ../partials/footer.ejs%>
+
+

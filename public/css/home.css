@@ -1,0 +1,35 @@
+
+
+.home-container .welcome-container{
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.home-container .welcome-container .welcome{
+	font-size: 40px;
+	color: white;
+	display: block;
+	position: relative;
+	left: -50%;
+	transition: all 1s;
+}
+
+.welcome span{
+	display: block;
+}
+
+.welcome.position-fixed{
+	left: 0!important;
+}
+
+.button{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+

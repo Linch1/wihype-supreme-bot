@@ -1,0 +1,94 @@
+
+.button{
+	color: white;
+	width: 50% !important;
+	height: 50%;
+	position: relative;
+	border-bottom: 3px solid white;
+	border-top: 3px solid white;
+	cursor: pointer;
+	transition: all 1s;
+	margin-left: 1rem;
+	overflow: hidden;
+}
+
+.button span{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	transition: all 1s;
+	width: 80%;
+	text-align: center;
+}
+
+.button:hover.submit span{ 
+	color: #5ea36a;
+}
+
+.button:hover.copy span{ 
+	color: #087e8b;
+}
+
+.button:hover.delete span{ 
+	color: #af1b3f;
+}
+
+.button:hover.edit span{ 
+	color: #a15e49;
+}
+
+
+.button .background{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: -105%;
+	transition: all 1s;
+	background-color: white;
+
+}
+
+.button:hover div.background{
+	left: 0 !important;
+}
+
+.button.delete-all:hover div.background{
+	background-color: red;
+}
+
+.button.run-all:hover div.background{
+	background-color: #5ea36a;
+}
+
+
+.button.stop-all:hover div.background{
+	background-color: #1e1e1e;
+}
+
+
+.button.copy-all:hover div.background{
+	background-color: #087e8b;
+}
+
+.button.captcha-all:hover div.background{
+	background-color: #8963ba;
+}
+
+
+.button.delete-all:hover{
+	border-color: red;
+}
+
+.button.run-all:hover{
+	border-color: #5ea36a;
+}
+
+.button.stop-all:hover{
+	border-color: red;
+}
+
+.button.copy-all:hover{
+	border-color: #087e8b;
+}

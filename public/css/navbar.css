@@ -1,0 +1,80 @@
+.navbar-container{
+	width: 100vh;
+	position: fixed;
+	color: white;
+	height: 100%;
+	height: 3rem;
+	font-family: 'Poppins', sans-serif;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	justify-content: center;
+	align-items: center;
+	grid-auto-columns: 100px;
+	transform-origin: left top;
+	transform: rotate(-90deg)translateX(-100%);
+	z-index: 998;
+}
+
+.nav-logo a{
+	color:white;
+	text-decoration: none;
+}
+
+.nav-elem{
+	display: block;
+	grid-row: 1;
+	position: relative;
+	text-align: center;
+	opacity: 1;
+	right: 0%;
+	transition: 1s all;
+	cursor: pointer;
+}
+
+.nav-elem.shrink{
+	opacity: 0;
+	right: -50%;
+}
+.nav-menu-button{
+	grid-row: 1;
+	position: absolute;
+	right: -2%;
+	font-size: 1.2rem;
+	text-align: right;
+	margin-right: 2rem;
+	cursor: pointer;
+}
+
+.navbar-container .nav-elem ul{
+	list-style-type: none;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 7.5rem;
+	top: 150%;
+	padding: 0;
+	margin: 0;
+	
+}
+
+.navbar-container .nav-elem ul li{
+	margin-bottom: 1rem;
+	position: relative;
+	right: -50%;
+	opacity: 1;
+	transition: all 1s;
+	visibility: hidden;
+}
+
+.navbar-container .nav-elem ul li div{
+	text-decoration: none;
+	color: rgb(90, 186, 255);
+}
+
+.navbar-container .nav-elem ul li.position-fixed{
+	right: 0;
+}
+
+.remove-elem{
+	opacity: 0!important;
+}
