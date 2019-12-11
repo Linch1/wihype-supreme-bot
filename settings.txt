@@ -30,5 +30,6 @@ CMD: setx PATH "%PATH%;C:\Python38\Scripts"
 
 9) CMD: npm install
 10) CMD: py setup.py
+11) DOWNLOAD: https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w32-setup-v5.0.0-alpha.20191030.exe
 11) CMD: npm start
 
