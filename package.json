@@ -27,6 +27,7 @@
     "node-fetch": "^2.6.0",
     "open": "^7.0.0",
     "ps-node": "^0.1.6",
+    "python-shell": "^1.0.8",
     "request": "^2.88.0",
     "screen-size": "^1.0.0",
     "socks5-http-client": "^1.0.4",
