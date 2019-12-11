@@ -29,6 +29,6 @@ CMD: setx PATH "%PATH%;C:\Python38\Scripts"
    EXAMPLE: cd C:\Users\mcara\Desktop\sup-bot-master
 
 9) CMD: npm install
-11) CMD: py setup.py
-10) CMD: npm start
+10) CMD: py setup.py
+11) CMD: npm start
 
