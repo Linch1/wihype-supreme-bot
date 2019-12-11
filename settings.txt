@@ -32,9 +32,13 @@ CMD: setx PATH "%PATH%;C:\Python38\Scripts"
 
 10) CMD: py setup.py
 
-10.5) During the installation of the app at the next Step (11) be sure to select as the destination folder the Tesserecat-OCR folder, it is inside the sup-bot-master folder (The one where you found this file inside).
+11) FOR START THE APP CMD: npm start
 
-11) DOWNLOAD: https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w32-setup-v5.0.0-alpha.20191030.exe
+TO ENABLE 3D SECURE DETECTION FEATURE:
 
-11) CMD: npm start
+0) During the installation of the app at the next Step (11) be sure to select as the destination folder the Tesserecat-OCR folder, it is inside the sup-bot-master folder (The one where you found this file inside).
+
+1) DOWNLOAD: https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w32-setup-v5.0.0-alpha.20191030.exe
+
+2) INSTALL AN APP THA CAN MIRROR YOUR PHONE ON THE SCREEN
 
