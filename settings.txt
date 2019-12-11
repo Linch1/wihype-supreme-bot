@@ -17,3 +17,17 @@ cinst install python3 --version 3.8.0
 pip3
 
 ??? --- setx PATH "%PATH%;C:\Python38\Scripts"
+
+4 ---------------------
+close and reopen the console
+
+5 ---------------------
+
+cd <installed folder path>
+exemple: cd C:\Users\mcara\Desktop\sup-bot-master
+
+6 ---------------------
+npm install
+npm start
+
+END.
