@@ -40,8 +40,10 @@ function run_ocr(){
 	if (ocr_settings['pid'] == -1){
 		let program = plat == 'win32' ? 'wihype_ocr.exe' : (plat == 'darwin' ? '' : (plat == 'linux' ? 'linux' : ''))
 		if (program != ''){
-			if (plat == 'linux' || plat == 'win32' || plat == 'win32'){
+			if (plat == 'linux' || plat == 'win32'){
 				ocr_process = spawn('python3', ['wihype_ocr.py']);
+			} else if( plat == 'win32') {
+				ocr_process = spawn('py', ['wihype_ocr.py']);
 			} else {
 				ocr_process = spawn(program);
 			}
