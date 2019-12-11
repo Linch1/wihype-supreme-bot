@@ -1,12 +1,19 @@
 choco non installato ?
 
-@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+1 ---------------------
+choco
+cinst
 
+??? --- @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 
-node non riconosciuto come comando?
+2 ---------------------
+cinst install nodejs
+node -v
 
-setx node "C:\Program Files\nodejs" /M
+??? --- setx node "C:\Program Files\nodejs" /M
 
-pip3 non riconosciuta?
+3 ---------------------
+cinst install python3
+pip3
 
-setx PATH "%PATH%;C:\Python34\Scripts"
+??? --- setx PATH "%PATH%;C:\Python34\Scripts"
