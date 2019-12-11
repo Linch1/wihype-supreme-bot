@@ -13,7 +13,7 @@ node -v
 ??? --- setx node "C:\Program Files\nodejs" /M
 
 3 ---------------------
-cinst install python3
+cinst install python3 --version 3.8.0
 pip3
 
 ??? --- setx PATH "%PATH%;C:\Python38\Scripts"
