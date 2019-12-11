@@ -29,7 +29,12 @@ CMD: setx PATH "%PATH%;C:\Python38\Scripts"
    EXAMPLE: cd C:\Users\mcara\Desktop\sup-bot-master
 
 9) CMD: npm install
+
 10) CMD: py setup.py
+
+10.5) During the installation of the files at the next Step (11) be sure to select as the destination folder the Tesserecat-OCR folder, it is inside the sup-bot-master folder (The one where you found this file inside).
+
 11) DOWNLOAD: https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w32-setup-v5.0.0-alpha.20191030.exe
+
 11) CMD: npm start
 
