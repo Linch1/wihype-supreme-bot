@@ -16,12 +16,14 @@ function edit_ocr_settings(){
 
 const exec = require('child_process').exec
 
-function kill_ocr(){
+async function kill_ocr(){
 	if(ocr_settings['pid'] != -1){
 		if(ocr_process){
-			ocr_process.kill()
+			console.log('killing')
+			await ocr_process.kill()
+			console.log('killed')
 		} else {
-			ps.kill( ocr_settings['pid'], function( err ) {
+			await ps.kill( ocr_settings['pid'], function( err ) {
 			    if (err) {
 			        console.log( err );
 			    }
@@ -36,8 +38,9 @@ function kill_ocr(){
 	}
 }
 
-function run_ocr(){
-	kill_ocr();
+async function run_ocr(){
+	await kill_ocr();
+	console.log('running')
 	if (ocr_settings['pid'] == -1){
 		python_process = new PythonShell('wihype_ocr.py');
 		ocr_process = python_process.childProcess;
