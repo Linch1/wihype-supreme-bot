@@ -19,3 +19,8 @@ try:
 	import mss
 except:
 	os.system('pip3 install mss')
+	
+try:
+	import pyperclip
+except:
+	os.system('pip3 install pyperclip')
