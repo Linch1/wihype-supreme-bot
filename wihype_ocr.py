@@ -5,8 +5,6 @@
 # import the necessary packages
 import os
 
-os.system('pip3 install pillow pytesseract opencv-python mss ')
-
 from PIL import Image
 import pytesseract
 import cv2
@@ -22,6 +20,7 @@ import ast
 import json
 import sys
 import datetime
+import pyperclip
 
 sys.stdout = open('./datas/ocr_output.txt', 'w')
 print('STARTED ' + str(datetime.datetime.today()))
@@ -54,6 +53,7 @@ def read_text(gray):
             otp_code = otp[0]
             with open('./datas/otp.txt', 'w') as file:
                 file.write(otp_code)
+                pyperclip.copy(otp_code)
                 print(str(datetime.datetime.today()) + 'TROVATO IN ', time.time() - t_start, otp_code)
             break
 
