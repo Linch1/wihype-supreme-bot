@@ -31,36 +31,34 @@ TO ENABLE 3D SECURE DETECTION FEATURE:
 
 ## Linux installation 
 
-
 1. Install nodejs
-
- _Using Ubuntu_
+  _Using Ubuntu_
   - `curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -`
   - `sudo apt-get install -y nodejs`
-**for other info ** on how to install nodejs vbia package manager visit [Node.js download](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions-enterprise-linux-fedora-and-snap-packages)
+**for other info** on how to install nodejs vbia package manager visit [Node.js download](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions-enterprise-linux-fedora-and-snap-packages)
 2. Install git 
-
   _Using Ubuntu_
   - `apt-get install git`
-  **for other info ** on how to install git vbia package manager visit [git download](https://git-scm.com/download/linux)
+  **for other info** on how to install git vbia package manager visit [git download](https://git-scm.com/download/linux)
  
 3. Create a new folder and clone the project inside it
-
   - `git clone https://github.com/Linch1/sup-bot:<folder-name>`
 
 4. go inside that folder with the cd command
-
   - `cd <folder path>`
 
 5. initialize nodejs and download all packages
-
  - `npm install`
 
 6. Run the bot
-
   - `npm start`
-TO ENABLE 3D SECURE DETECTION FEATURE:
+  
+  ###### TO ENABLE 3D SECURE DETECTION FEATURE:
 
-0. During the installation of the app at the next Step (11) be sure to select as the destination folder the Tesserecat-OCR folder, it is inside the sup-bot-master folder (The one where you found this file inside).
-1. DOWNLOAD: https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w32-setup-v5.0.0-alpha.20191030.exe
-2. INSTALL AN APP THA CAN MIRROR YOUR PHONE ON THE SCREEN
+    1. Install the ocr binaries
+      __using ubuntu__
+      - `sudo apt install tesseract-ocr`
+      - `sudo apt install libtesseract-dev`
+    2. Run the python setup
+      - 'python3 setup.py`
+
