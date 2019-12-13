@@ -53,12 +53,12 @@ TO ENABLE 3D SECURE DETECTION FEATURE:
 6. Run the bot
   - `npm start`
   
-  ###### TO ENABLE 3D SECURE DETECTION FEATURE:
+#### TO ENABLE 3D SECURE DETECTION FEATURE:
 
-    1. Install the ocr binaries
+  1. Install the ocr binaries
       __using ubuntu__
       - `sudo apt install tesseract-ocr`
       - `sudo apt install libtesseract-dev`
-    2. Run the python setup
+  2. Run the python setup
       - 'python3 setup.py`
 
