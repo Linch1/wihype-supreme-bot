@@ -14,7 +14,6 @@ import re
 # construct the argument parse and parse the arguments
 import numpy as np
 import time
-import tkinter as tk
 import mss
 import ast
 import json
