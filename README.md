@@ -59,6 +59,8 @@ TO ENABLE 3D SECURE DETECTION FEATURE:
       __using ubuntu__
       - `sudo apt install tesseract-ocr`
       - `sudo apt install libtesseract-dev`
+  3. Install xclip
+      - `sudo apt install xclip`
   2. Run the python setup
       - 'python3 setup.py`
 
