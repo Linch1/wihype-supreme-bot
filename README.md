@@ -8,7 +8,7 @@ CMD: means that you have to execute a command in the terminal
 2. CMD: choco
   - if the following step has generated an error 
   - CMD: @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
-3. CMD: cinst install nodejs
+3. CMD: cinst nodejs
 4. CMD: node -v
   - if the following step has generated an error 
   - CMD: setx node "C:\Program Files\nodejs" /M
