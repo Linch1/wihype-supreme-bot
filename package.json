@@ -23,7 +23,7 @@
     "ejs": "^2.7.2",
     "ejs-electron": "^2.0.3",
     "mkdirp": "^0.5.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "open": "^7.0.0",
     "ps-node": "^0.1.6",
     "python-shell": "^1.0.8",
