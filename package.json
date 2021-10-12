@@ -35,7 +35,7 @@
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
-    "electron": "^6.1.5"
+    "electron": "^11.5.0"
   },
   "bin": "index.js"
 }
